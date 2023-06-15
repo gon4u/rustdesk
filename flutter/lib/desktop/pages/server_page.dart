@@ -354,7 +354,7 @@ class _CmHeaderState extends State<_CmHeader>
           end: Alignment.bottomLeft,
           colors: [
             Color(0xff05e8c5),
-            Color(0xff038773),
+            Color(0xff025e50),
           ],
         ),
       ),
