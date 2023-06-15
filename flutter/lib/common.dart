@@ -423,7 +423,7 @@ class MyTheme {
     colorScheme: ColorScheme.dark(
       primary: Colors.blue,
       secondary: accent,
-      background: Color(0xFF1B2B40),
+      background: Color(0xFF2A4363),
     ),
   ).copyWith(
     extensions: <ThemeExtension<dynamic>>[
