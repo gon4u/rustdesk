@@ -407,7 +407,7 @@ fn patch(path: PathBuf) -> PathBuf {
 
 impl Config2 {
     fn load() -> Config2 {
-        config.options.insert("key".to_string(), RS_PUB_KEY.to_string());
+        //config.options.insert("key".to_string(), RS_PUB_KEY.to_string());
         let mut config = Config::load_::<Config2>("2");
         if let Some(mut socks) = config.socks {
             let (password, _, store) =
