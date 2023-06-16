@@ -81,11 +81,16 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-pub const RENDEZVOUS_SERVERS: &'static [&'static str] = &[
-    "hushdesk.acin.pt",
+pub const RENDEZVOUS_SERVERS: &[&str] = &[
+    "rs-ny.rustdesk.com",
+    "rs-sg.rustdesk.com",
+    "rs-cn.rustdesk.com",
 ];
 
-pub const RS_PUB_KEY: &'static str = "6AXxvILMK+iImwOnJP3vmKPLvoQKxPrBAqQKm3kcISM=";
+pub const RS_PUB_KEY: &str = match option_env!("RS_PUB_KEY") {
+    Some(key) if !key.is_empty() => key,
+    _ => "OeVuKk5nlHiXp+APNn0Y3pC1Iwpwn44JGqrQCsWqmBw=",
+};
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
 pub const RELAY_PORT: i32 = 21117;
@@ -407,7 +412,6 @@ fn patch(path: PathBuf) -> PathBuf {
 
 impl Config2 {
     fn load() -> Config2 {
-        //config.options.insert("key".to_string(), RS_PUB_KEY.to_string());
         let mut config = Config::load_::<Config2>("2");
         if let Some(mut socks) = config.socks {
             let (password, _, store) =
