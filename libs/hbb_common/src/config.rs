@@ -85,10 +85,7 @@ pub const RENDEZVOUS_SERVERS: &[&str] = &[
     "hushdesk.acin.pt",
 ];
 
-pub const RS_PUB_KEY: &str = match option_env!("RS_PUB_KEY") {
-    Some(key) if !key.is_empty() => key,
-    _ => "6AXxvILMK+iImwOnJP3vmKPLvoQKxPrBAqQKm3kcISM=",
-};
+pub const RS_PUB_KEY: &'static str = "6AXxvILMK+iImwOnJP3vmKPLvoQKxPrBAqQKm3kcISM=";
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
 pub const RELAY_PORT: i32 = 21117;
