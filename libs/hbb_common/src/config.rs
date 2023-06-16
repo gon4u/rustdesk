@@ -81,7 +81,7 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-pub const RENDEZVOUS_SERVERS: &[&str] [&'static str] = &[
+pub const RENDEZVOUS_SERVERS: &'static [&'static str] = &[
     "hushdesk.acin.pt",
 ];
 
