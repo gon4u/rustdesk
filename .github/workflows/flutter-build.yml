@@ -1,3 +1,4 @@
+runs-on: self-hosted
 name: Build the flutter version of the RustDesk 
 
 on:
