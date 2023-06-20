@@ -30,7 +30,7 @@ env:
   UPLOAD_ARTIFACT: "${{ inputs.upload-artifact }}"
 
 jobs:
-  runs-on: self-hosted
+  #runs-on: self-hosted
   build-for-windows-flutter:
     name: ${{ matrix.job.target }} (${{ matrix.job.os }})
     runs-on: ${{ matrix.job.os }}
