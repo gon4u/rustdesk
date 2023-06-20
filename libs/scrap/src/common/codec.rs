@@ -189,7 +189,7 @@ impl Encoder {
         }
 
         #[allow(unused_mut)]
-        let mut auto_codec = CodecName::VP9;
+        let mut auto_codec = CodecName::H265;
         #[cfg(not(any(target_os = "android", target_os = "ios")))]
         if vp8_useable && System::new_all().total_memory() <= 4 * 1024 * 1024 * 1024 {
             // 4 Gb
